@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#173f2b" />
+  <meta name="description" content="Support the work of The House of Hope Foundation. Make a donation by card." />
+  <title>The House of Hope Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0&display=swap" rel="stylesheet">
+  <style>
+    :root{--forest:#173f2b;--forest2:#214f35;--sage:#80aa7b;--sage-light:#dce7d5;--cream:#f3f0e3;--paper:#fbf9f0;--yellow:#f1d76d;--ink:#1e3025;--muted:#667366;--white:#fff;--line:rgba(23,63,43,.14);--shadow:0 18px 55px rgba(24,55,36,.12);--radius:22px}
+    .material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:22px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;font-feature-settings:'liga';-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased;vertical-align:middle}.step-icon .material-symbols-outlined{font-size:26px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Manrope',sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input,select{font:inherit}.container{width:min(1160px,calc(100% - 44px));margin:auto}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--sage);font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.eyebrow:before{content:'';width:24px;height:2px;background:currentColor}.section-title{font:800 clamp(2rem,4vw,3.45rem)/1.03 'Manrope',sans-serif;letter-spacing:-.025em;color:var(--forest);margin:15px 0}.section-copy{color:var(--muted);max-width:610px;margin:0;font-size:1rem}
+    header{position:absolute;z-index:5;top:0;left:0;width:100%;padding:22px 0;color:var(--forest)}.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:10px;font:800 1.05rem 'Manrope',sans-serif;letter-spacing:-.04em}.brand-mark{width:42px;height:34px;display:grid;align-content:center;gap:3px}.brand-mark i{height:5px;background:var(--forest);border-radius:100% 8px 100% 8px;transform:skewY(-8deg)}.brand-mark i:nth-child(2){width:85%;margin-left:5px}.brand-mark i:nth-child(3){width:70%;margin-left:10px}.nav-links{display:flex;align-items:center;gap:30px;font-size:.88rem;font-weight:600}.nav-links a{opacity:.8;transition:.2s}.nav-links a:hover{opacity:1}.nav-actions{display:flex;align-items:center;gap:12px}.currency-select{border:1px solid var(--line);background:rgba(255,255,255,.6);color:var(--forest);border-radius:999px;padding:10px 13px;font-weight:700;outline:none}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;padding:14px 23px;background:var(--forest);color:#fff;font-weight:700;cursor:pointer;transition:transform .2s,background .2s}.btn:hover{background:var(--forest2);transform:translateY(-2px)}.btn-yellow{background:var(--yellow);color:var(--forest)}.btn-yellow:hover{background:#e8ce5d}.btn-outline{background:transparent;border:1px solid rgba(255,255,255,.55);color:white}.btn-outline:hover{background:rgba(255,255,255,.12)}
+    .hero{min-height:690px;display:flex;align-items:center;padding:145px 0 80px;position:relative;overflow:hidden;background:var(--cream)}.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(243,240,227,.98) 0%,rgba(243,240,227,.92) 38%,rgba(243,240,227,.35) 68%,rgba(23,63,43,.12) 100%),url('assets/hero-gaza.jpg') center 43%/cover no-repeat}.hero:after{content:'';position:absolute;width:430px;height:430px;border-radius:50%;background:rgba(128,170,123,.18);left:-190px;bottom:-250px}.hero-content{position:relative;z-index:1;max-width:610px}.hero .eyebrow{color:var(--forest2)}.hero h1{font:800 clamp(3.2rem,7vw,6.5rem)/.94 'Manrope',sans-serif;letter-spacing:-.035em;color:var(--forest);margin:25px 0}.hero h1 span{font-family:'Newsreader',serif;font-weight:500;font-style:italic;color:#719b6b;letter-spacing:-.045em}.hero p{font-size:1.05rem;color:#536455;max-width:520px;margin:0 0 30px}.hero-buttons{display:flex;flex-wrap:wrap;gap:12px}.hero-note{display:flex;align-items:center;gap:12px;margin-top:38px;color:#536455;font-size:.82rem}.avatars{display:flex}.avatars img{width:30px;height:30px;object-fit:cover;border-radius:50%;border:2px solid var(--cream);margin-left:-8px}.avatars img:first-child{margin-left:0}.hero-note strong{color:var(--forest)}
+    .ticker{background:var(--forest);color:#fff;overflow:hidden;padding:15px 0}.ticker-inner{display:flex;justify-content:space-between;gap:28px;white-space:nowrap;font:700 .83rem 'Manrope',sans-serif;letter-spacing:.06em;text-transform:uppercase}.ticker span{display:flex;align-items:center;gap:13px}.ticker b{color:var(--yellow);font-size:1.1rem}
+    .donate-section{padding:105px 0;background:var(--cream)}.donate-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.donate-copy .section-title{max-width:510px}.donate-copy p{color:var(--muted);max-width:500px}.impact-quote{margin-top:36px;padding:22px 25px;border-left:3px solid var(--sage);background:rgba(255,255,255,.45);border-radius:0 15px 15px 0;color:var(--forest);font:600 1.05rem 'Manrope',sans-serif}.donation-card{background:var(--paper);border:1px solid rgba(23,63,43,.09);border-radius:28px;padding:32px;box-shadow:var(--shadow)}.card-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:23px}.card-top h3{font:800 1.45rem 'Manrope',sans-serif;color:var(--forest);margin:0}.secure{font-size:.72rem;color:var(--forest2);font-weight:700;display:flex;align-items:center;gap:6px}.secure:before{content:'✓';width:19px;height:19px;border-radius:50%;display:grid;place-items:center;background:var(--sage-light)}.frequency{display:grid;grid-template-columns:1fr 1fr;background:#e9eadf;padding:5px;border-radius:999px;margin-bottom:23px}.frequency button{border:0;background:transparent;color:#687567;border-radius:999px;padding:11px;font-weight:700;cursor:pointer}.frequency button.active{background:var(--forest);color:white;box-shadow:0 4px 12px rgba(23,63,43,.16)}.amount-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:.83rem;font-weight:700;color:var(--forest)}.amount-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.amount-option{padding:14px 8px;border:1px solid var(--line);border-radius:12px;background:white;color:var(--forest);font-weight:700;cursor:pointer}.amount-option.active{background:var(--sage-light);border:1.5px solid var(--forest)}.custom-amount{margin-top:11px;display:flex;align-items:center;border:1px solid var(--line);background:white;border-radius:12px;padding:0 14px}.custom-amount span{font-weight:700;color:var(--muted)}.custom-amount input{width:100%;border:0;outline:0;padding:13px 9px;background:transparent;color:var(--forest);font-weight:700}.donor-fields{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:20px}.donor-fields input{min-width:0;width:100%;border:1px solid var(--line);border-radius:11px;padding:13px 14px;background:#fff;outline-color:var(--sage)}.donor-fields input:first-child{grid-column:1/-1}.payment-method{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--line);border-radius:12px;padding:13px 14px;margin:17px 0;color:var(--forest);font-size:.83rem}.payment-method strong{display:flex;align-items:center;gap:9px}.card-icons{display:flex;gap:5px}.card-icons i{font-style:normal;font-size:.67rem;font-weight:800;border:1px solid #d9ded6;background:white;border-radius:4px;padding:3px 5px}.donate-submit{width:100%;padding:16px}.fine-print{text-align:center;color:#899287;font-size:.7rem;margin:12px 0 0}.form-message{display:none;margin-top:12px;padding:11px 13px;border-radius:10px;background:#fff3d2;color:#66521a;font-size:.82rem}.form-message.show{display:block}
+    .steps-section{padding:105px 0;background:var(--paper)}.steps-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:48px}.steps-head .section-copy{max-width:390px}.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step-card{background:var(--cream);border-radius:18px;padding:25px 22px;min-height:235px;transition:transform .25s}.step-card:hover{transform:translateY(-5px)}.step-icon{width:48px;height:48px;border-radius:15px;background:var(--sage-light);display:grid;place-items:center;color:var(--forest);font-size:1.35rem;margin-bottom:25px}.step-card h3{font:800 1.13rem/1.15 'Manrope',sans-serif;color:var(--forest);margin:0 0 10px}.step-card p{font-size:.86rem;color:var(--muted);margin:0}
+    .transparency{padding:80px 0;background:var(--sage);color:white;position:relative;overflow:hidden}.transparency:after{content:'∞';position:absolute;font:400 27rem/1 'Manrope',sans-serif;color:rgba(255,255,255,.08);right:2%;top:-90px}.transparency .container{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}.transparency .eyebrow{color:#f8eaa8}.transparency .section-title{color:white;max-width:570px}.transparency p{max-width:560px;color:rgba(255,255,255,.88)}.transparency-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat{border:1px solid rgba(255,255,255,.35);border-radius:16px;padding:20px;background:rgba(255,255,255,.1)}.stat strong{display:block;font:800 2rem 'Manrope',sans-serif;color:#fff}.stat span{font-size:.78rem;color:rgba(255,255,255,.85)}
+    .about-section{padding:105px 0;background:var(--cream)}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:75px;align-items:center}.about-photo{min-height:460px;border-radius:24px;overflow:hidden;position:relative;background:url('assets/hero-gaza.jpg') center/cover}.about-photo:after{content:'Standing together. Rebuilding together.';position:absolute;left:20px;right:20px;bottom:20px;padding:17px 19px;background:rgba(23,63,43,.88);border-radius:13px;color:white;font:600 1.05rem 'Manrope',sans-serif}.about-text p{color:var(--muted)}.about-signoff{font:italic 600 1.2rem 'Newsreader',serif;color:var(--sage);margin-top:28px}
+    .cta-band{padding:75px 0;background:var(--forest);color:white;text-align:center}.cta-band h2{font:800 clamp(2rem,4vw,3.5rem)/1 'Manrope',sans-serif;letter-spacing:-.05em;margin:0 auto 17px;max-width:760px}.cta-band p{color:rgba(255,255,255,.72);max-width:550px;margin:0 auto 25px}.gallery-strip{display:grid;grid-template-columns:repeat(4,1fr);height:190px;overflow:hidden}.gallery-strip div{background-size:cover;background-position:center;filter:saturate(.55)}.gallery-strip div:nth-child(1){background-image:url('https://images.unsplash.com/photo-1489493585363-d69421e0edd3?auto=format&fit=crop&w=600&q=75')}.gallery-strip div:nth-child(2){background-image:url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=600&q=75')}.gallery-strip div:nth-child(3){background-image:url('https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=600&q=75')}.gallery-strip div:nth-child(4){background-image:url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=600&q=75')}
+    footer{background:#14251b;color:rgba(255,255,255,.7);padding:38px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}.footer-brand{color:white}.footer-small{font-size:.75rem}.footer-links{display:flex;gap:20px;font-size:.8rem}.footer-links a:hover{color:white}
+    @media(max-width:900px){.nav-links{display:none}.hero:before{left:28%;opacity:.7}.donate-grid,.transparency .container,.about-grid{grid-template-columns:1fr;gap:38px}.donate-copy{max-width:650px}.steps-grid{grid-template-columns:repeat(2,1fr)}.steps-head{display:block}.steps-head .section-copy{margin-top:15px}.about-photo{min-height:360px}.transparency:after{right:-100px}}
+    @media(max-width:560px){.container{width:min(100% - 30px,1160px)}header{padding:15px 0}.brand{font-size:.92rem}.brand-mark{width:34px}.nav-actions{gap:7px}.currency-select{padding:9px 8px;font-size:.78rem}.nav-actions .btn{padding:10px 14px;font-size:.8rem}.hero{min-height:690px;padding:125px 0 65px}.hero:before{inset:0;opacity:1;background-image:linear-gradient(90deg,rgba(243,240,227,.97),rgba(243,240,227,.82) 55%,rgba(243,240,227,.35)),url('assets/hero-gaza.jpg')}.hero h1{font-size:clamp(3.25rem,16vw,5rem)}.hero p{font-size:.96rem}.donate-section,.steps-section,.about-section{padding:75px 0}.donation-card{padding:22px 17px}.card-top{align-items:flex-start;flex-direction:column}.donor-fields{grid-template-columns:1fr}.donor-fields input:first-child{grid-column:auto}.steps-grid{grid-template-columns:1fr 1fr;gap:10px}.step-card{padding:19px 15px;min-height:245px}.step-card h3{font-size:1rem}.step-card p{font-size:.8rem}.transparency{padding:70px 0}.transparency-stats{gap:8px}.stat{padding:15px}.stat strong{font-size:1.6rem}.gallery-strip{height:115px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}.hero-note{font-size:.75rem}}
+
+    .checkout-overlay{position:fixed;inset:0;z-index:30;background:rgba(10,28,18,.66);display:none;align-items:center;justify-content:center;padding:22px;backdrop-filter:blur(5px)}.checkout-overlay.open{display:flex}.checkout-modal{width:min(100%,520px);max-height: min(92vh,850px);overflow:auto;background:var(--paper);border-radius:24px;box-shadow:0 30px 90px rgba(0,0,0,.28);padding:28px}.checkout-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:20px}.checkout-head h2{margin:0;color:var(--forest);font:800 1.45rem Manrope,sans-serif}.checkout-close{border:0;background:#edf0e8;color:var(--forest);border-radius:50%;width:38px;height:38px;font-size:1.4rem;cursor:pointer}.checkout-secure{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:.78rem;margin:0 0 18px}.checkout-summary{background:#edf1e8;border-radius:15px;padding:17px;margin-bottom:20px}.checkout-summary small{display:block;color:var(--muted);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}.checkout-total{font-size:2rem;font-weight:800;color:var(--forest);letter-spacing:-.04em}.checkout-row{display:flex;justify-content:space-between;gap:12px;font-size:.82rem;color:var(--muted);margin-top:5px}.checkout-label{display:block;color:var(--forest);font-size:.8rem;font-weight:800;margin:17px 0 7px}.checkout-input{width:100%;border:1px solid var(--line);border-radius:11px;padding:13px 14px;background:white;color:var(--forest);outline-color:var(--sage)}.checkout-card-preview{border:1px solid var(--line);border-radius:14px;padding:17px;background:linear-gradient(135deg,#fff 0%,#f0f3eb 100%);margin-top:8px}.checkout-card-brand{display:flex;justify-content:space-between;align-items:center;color:var(--forest);font-size:.78rem;font-weight:800}.checkout-card-number{font-size:1.18rem;letter-spacing:.12em;color:var(--forest);margin:22px 0 16px}.checkout-card-bottom{display:flex;justify-content:space-between;color:var(--muted);font-size:.7rem;text-transform:uppercase}.checkout-card-bottom strong{display:block;color:var(--forest);font-size:.82rem;letter-spacing:0;text-transform:none}.checkout-pay{width:100%;margin-top:20px;padding:16px}.checkout-foot{font-size:.7rem;color:var(--muted);text-align:center;margin:12px 0 0}.checkout-result{display:none;text-align:center;padding:12px 2px 4px}.checkout-result.show{display:block}.checkout-result-icon{width:60px;height:60px;margin:0 auto 14px;border-radius:50%;display:grid;place-items:center;background:var(--sage-light);color:var(--forest);font-size:30px}.checkout-result h3{color:var(--forest);font-size:1.35rem;margin:0 0 8px}.checkout-result p{color:var(--muted);font-size:.86rem}.receipt-box{text-align:left;background:#edf1e8;border-radius:13px;padding:15px;margin:18px 0;font-size:.8rem;color:var(--forest)}.receipt-box div{display:flex;justify-content:space-between;gap:10px;padding:5px 0}.preview-note{font-size:.72rem;color:#647263;background:#f2f0e5;border-radius:10px;padding:10px 12px;margin-top:14px}
+    @media(max-width:600px){.checkout-modal{padding:21px}.checkout-total{font-size:1.7rem}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="The House of Hope Foundation home"><span class="brand-mark"><i></i><i></i><i></i></span><span>THE HOUSE OF HOPE FOUNDATION</span></a>
+      <nav class="nav-links" aria-label="Main navigation"><a href="#mission">Our mission</a><a href="#impact">Our work</a><a href="#transparency">Transparency</a><a href="#about">About us</a></nav>
+      <div class="nav-actions">
+        <select class="currency-select" id="currencyTop" aria-label="Choose donation currency"><option value="USD">USD $</option><option value="EUR">EUR €</option><option value="GBP">GBP £</option></select>
+        <a class="btn" href="#donate">Donate <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container"><div class="hero-content">
+        <span class="eyebrow">Emergency relief · Gaza</span>
+        <h1>Rebuilding<br>life and <span>dignity</span><br>in Gaza.</h1>
+        <p>When homes, essential services and everyday life are disrupted, people need more than immediate relief. They need the support and resources to begin again. Stand with families as they work towards a safer, more hopeful future.</p>
+        <div class="hero-buttons"><a class="btn" href="#donate">Make a donation <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></a><a class="btn btn-outline" href="#mission">Discover our mission</a></div>
+        <div class="hero-note"><span><strong>The House of Hope Foundation</strong><br>Donations by card · USD, EUR and GBP</span></div>
+      </div></div>
+    </section>
+    <div class="ticker"><div class="container ticker-inner"><span><b><span class="material-symbols-outlined" aria-hidden="true">health_and_safety</span></b> Emergency relief</span><span><b><span class="material-symbols-outlined" aria-hidden="true">groups</span></b> Community support</span><span><b><span class="material-symbols-outlined" aria-hidden="true">volunteer_activism</span></b> Responsible giving</span><span><b><span class="material-symbols-outlined" aria-hidden="true">home</span></b> A place to begin again</span></div></div>
+
+    <section class="donate-section" id="donate">
+      <div class="container donate-grid">
+        <div class="donate-copy" id="mission"><span class="eyebrow">Your support makes a difference</span><h2 class="section-title">Help us provide support where it is needed.</h2><p>Your donation will support the Foundation’s charitable work. Please check the organisation’s published updates for details of current programmes and how funds are used.</p><p>Choose a one-time or monthly donation. Select USD, EUR or GBP and continue to the card payment step.</p><div class="impact-quote">“Thank you for supporting the work of The House of Hope Foundation.”</div></div>
+        <div class="donation-card">
+          <div class="card-top"><h3>Make your donation</h3><span class="secure">Secure card giving</span></div>
+          <div class="frequency" role="group" aria-label="Donation frequency"><button type="button" class="active" data-frequency="once">One-time</button><button type="button" data-frequency="monthly">Monthly</button></div>
+          <div class="amount-label"><label>Choose an amount</label><span id="currencyLabel">USD ($)</span></div>
+          <div class="amount-grid" id="amountGrid"><button type="button" class="amount-option" data-amount="25">$25</button><button type="button" class="amount-option active" data-amount="50">$50</button><button type="button" class="amount-option" data-amount="100">$100</button><button type="button" class="amount-option" data-amount="150">$150</button><button type="button" class="amount-option" data-amount="250">$250</button><button type="button" class="amount-option" data-amount="500">$500</button></div>
+          <label class="amount-label" for="customAmount" style="margin-top:18px">Or enter a custom amount</label>
+          <div class="custom-amount"><span id="currencySymbol">$</span><input id="customAmount" type="number" min="1" step="0.01" placeholder="Enter amount" inputmode="decimal"></div>
+          <form id="donationForm">
+            <div class="donor-fields"><input id="donorName" name="name" type="text" placeholder="Full name" autocomplete="name" required><input id="donorEmail" name="email" type="email" placeholder="Email address" autocomplete="email" required><input id="donorCountry" name="country" type="text" placeholder="Country (optional)" autocomplete="country-name"></div>
+            <div class="payment-method"><strong><span class="material-symbols-outlined" aria-hidden="true">credit_card</span> Credit or debit card</strong><span class="card-icons"><i>VISA</i><i>MC</i></span></div>
+            <button class="btn donate-submit" type="submit">Continue to card payment <span aria-hidden="true">→</span></button>
+            <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps-section" id="impact"><div class="container">
+      <div class="steps-head"><div><span class="eyebrow">From relief to recovery</span><h2 class="section-title">Our areas of work.</h2></div><p class="section-copy">The Foundation’s work and current priorities should be described here using confirmed programme information.</p></div>
+      <div class="steps-grid">
+        <article class="step-card"><div class="step-icon"><span class="material-symbols-outlined" aria-hidden="true">home</span></div><h3>Shelter and safety</h3><p>Support for people who need safe places to stay.</p></article>
+        <article class="step-card"><div class="step-icon"><span class="material-symbols-outlined" aria-hidden="true">water_drop</span></div><h3>Clean water</h3><p>Support for access to safe water and essential services.</p></article>
+        <article class="step-card"><div class="step-icon"><span class="material-symbols-outlined" aria-hidden="true">volunteer_activism</span></div><h3>Essential supplies</h3><p>Assistance with essential items and basic needs.</p></article>
+        <article class="step-card"><div class="step-icon"><span class="material-symbols-outlined" aria-hidden="true">groups</span></div><h3>Community recovery</h3><p>Support for recovery initiatives in affected communities.</p></article>
+      </div>
+    </div></section>
+
+    <section class="transparency" id="transparency"><div class="container">
+      <div><span class="eyebrow">Accountability</span><h2 class="section-title">How donations are used.</h2><p>The Foundation should publish clear information about its programmes, fundraising costs and the use of donations. Add verified reports and programme updates here.</p><p>Donors can refer to the Foundation’s official updates for information about its work.</p></div>
+      <div class="transparency-stats"><div class="stat"><strong>100%</strong><span>Donation information</span></div><div class="stat"><strong>One</strong><span>Foundation</span></div><div class="stat"><strong>100%</strong><span>Programme updates</span></div><div class="stat"><strong>Shared</strong><span>Purpose</span></div></div>
+    </div></section>
+
+    <section class="about-section" id="about"><div class="container about-grid"><div class="about-photo" role="img" aria-label="Community members working together"></div><div class="about-text"><span class="eyebrow">Who we are</span><h2 class="section-title">About the Foundation.</h2><p><strong>The House of Hope Foundation</strong></p><p>The House of Hope Foundation is a charitable organisation. Add its verified history, registration details, leadership and programme information here.</p><p>Use this section to explain the Foundation’s work and how donations are allocated. Only publish details that have been confirmed by the organisation.</p><p>Join us in this journey to make a difference. Together, we can help build a community where everyone has the opportunity to recover and move forward.</p><div class="about-signoff">Thank you for your support.</div></div></div></section>
+
+    <section class="cta-band"><div class="container"><h2>Support The House of Hope Foundation.</h2><p>Make a donation by card in USD, EUR or GBP.</p><a class="btn btn-yellow" href="#donate">Donate by card <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></a></div></section>
+    <div class="gallery-strip" aria-hidden="true"><div></div><div></div><div></div><div></div></div>
+  </main>
+  <footer><div class="container footer-inner"><a class="brand footer-brand" href="#home"><span class="brand-mark"><i></i><i></i><i></i></span><span>THE HOUSE OF HOPE FOUNDATION</span></a><span class="footer-small">© <span id="year"></span> A charitable organisation.</span><div class="footer-links"><a href="#mission">Our mission</a><a href="#transparency">Transparency</a><a href="#donate">Donate</a></div></div></footer>
+
+
+  <div class="checkout-overlay" id="checkoutOverlay" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <section class="checkout-modal">
+      <div class="checkout-head"><h2 id="checkoutTitle">Secure card checkout</h2><button class="checkout-close" id="checkoutClose" type="button" aria-label="Close checkout">×</button></div>
+      <div id="checkoutFormView">
+        <p class="checkout-secure"><span class="material-symbols-outlined" aria-hidden="true">lock</span> Encrypted checkout preview · Visa and Mastercard</p>
+        <div class="checkout-summary"><small>Your donation</small><div class="checkout-total" id="checkoutTotal">$50.00</div><div class="checkout-row"><span>Frequency</span><strong id="checkoutFrequency">One-time</strong></div><div class="checkout-row"><span>Recipient</span><strong>The House of Hope Foundation</strong></div></div>
+        <span class="checkout-label">Card payment</span>
+        <div class="checkout-card-preview"><div class="checkout-card-brand"><span>HOUSE OF HOPE</span><span id="checkoutBrand">VISA</span></div><div class="checkout-card-number">•••• &nbsp;•••• &nbsp;•••• &nbsp;4242</div><div class="checkout-card-bottom"><span>Cardholder<strong id="checkoutCardName">DONOR NAME</strong></span><span>Expires<strong>MM / YY</strong></span></div></div>
+        <p class="preview-note">This is an interactive checkout preview. It uses a sample card display and does not request or transmit real card details.</p>
+        <button class="btn donate-submit checkout-pay" id="previewPay" type="button">Complete payment preview <span aria-hidden="true">→</span></button>
+        <p class="checkout-foot">Bitcoin settlement destination: Proton Wallet · BTC</p>
+      </div>
+      <div class="checkout-result" id="checkoutResult" aria-live="polite"><div class="checkout-result-icon"><span class="material-symbols-outlined" aria-hidden="true">check</span></div><h3>Payment preview complete</h3><p>Your checkout journey has been demonstrated successfully.</p><div class="receipt-box"><div><span>Reference</span><strong id="previewReference">HOH-PREVIEW</strong></div><div><span>Donation</span><strong id="receiptAmount">$50.00</strong></div><div><span>Payment method</span><strong>Visa / Mastercard</strong></div><div><span>Settlement preference</span><strong>Bitcoin (BTC)</strong></div><div><span>Donor</span><strong id="receiptDonor">Donor</strong></div></div><p class="preview-note">Preview only: no card has been charged and no Bitcoin has been transferred. Live processing can be enabled after the Foundation connects an approved payment provider.</p><button class="btn donate-submit" id="checkoutDone" type="button">Done</button></div>
+    </section>
+  </div>
+
+  <script>
+    // Indicative fixed conversion rates for the front-end demo. Replace with a live rates service before launch.
+    const rates = { USD: 1, EUR: 0.92, GBP: 0.79 };
+    const symbols = { USD: '$', EUR: '€', GBP: '£' };
+    const labels = { USD: 'USD ($)', EUR: 'EUR (€)', GBP: 'GBP (£)' };
+    const baseAmounts = [25, 50, 100, 150, 250, 500];
+    let currency = 'USD';
+    let frequency = 'once';
+    let selectedBaseAmount = 50;
+    const currencyTop = document.getElementById('currencyTop');
+    const currencyLabel = document.getElementById('currencyLabel');
+    const currencySymbol = document.getElementById('currencySymbol');
+    const customAmount = document.getElementById('customAmount');
+    const amountGrid = document.getElementById('amountGrid');
+    const message = document.getElementById('formMessage');
+
+    function money(value) {
+      const converted = value * rates[currency];
+      return new Intl.NumberFormat('en', { maximumFractionDigits: 0 }).format(Math.round(converted));
+    }
+    function renderAmounts() {
+      amountGrid.innerHTML = '';
+      baseAmounts.forEach(base => {
+        const button = document.createElement('button');
+        button.type = 'button'; button.className = 'amount-option' + (base === selectedBaseAmount ? ' active' : '');
+        button.dataset.amount = String(base);
+        button.textContent = symbols[currency] + money(base);
+        button.addEventListener('click', () => { selectedBaseAmount = base; customAmount.value = ''; renderAmounts(); });
+        amountGrid.appendChild(button);
+      });
+      currencyLabel.textContent = labels[currency];
+      currencySymbol.textContent = symbols[currency];
+    }
+    currencyTop.addEventListener('change', event => { currency = event.target.value; customAmount.value = ''; renderAmounts(); });
+    document.querySelectorAll('.frequency button').forEach(button => button.addEventListener('click', () => {
+      frequency = button.dataset.frequency;
+      document.querySelectorAll('.frequency button').forEach(item => item.classList.toggle('active', item === button));
+    }));
+    customAmount.addEventListener('input', () => {
+      if (customAmount.value !== '') { selectedBaseAmount = null; amountGrid.querySelectorAll('button').forEach(button => button.classList.remove('active')); }
+    });
+    // Interactive checkout preview. No real card details are collected and no payment is processed.
+    const FOUNDATION_BTC_WALLET = 'bc1qn7msgpxnlcgx29gxlwe4e276gys95z9sgsq4er';
+    const checkoutOverlay = document.getElementById('checkoutOverlay');
+    const checkoutFormView = document.getElementById('checkoutFormView');
+    const checkoutResult = document.getElementById('checkoutResult');
+    let currentDonation = null;
+    function closeCheckout(){checkoutOverlay.classList.remove('open');document.body.style.overflow='';}
+    document.getElementById('checkoutClose').addEventListener('click',closeCheckout);
+    document.getElementById('checkoutDone').addEventListener('click',closeCheckout);
+    checkoutOverlay.addEventListener('click',event=>{if(event.target===checkoutOverlay)closeCheckout();});
+    document.addEventListener('keydown',event=>{if(event.key==='Escape')closeCheckout();});
+    document.getElementById('donationForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const entered = Number(customAmount.value);
+      const amount = customAmount.value !== '' ? entered : selectedBaseAmount * rates[currency];
+      if (!Number.isFinite(amount) || amount <= 0) {
+        message.textContent = 'Please choose or enter a valid donation amount.';
+        message.classList.add('show'); return;
+      }
+      const name = document.getElementById('donorName').value.trim();
+      const email = document.getElementById('donorEmail').value.trim();
+      if (!name || !email) {
+        message.textContent = 'Please enter your name and email address.';
+        message.classList.add('show'); return;
+      }
+      currentDonation = {amount, name, email, country:document.getElementById('donorCountry').value.trim(), currency, frequency};
+      const formattedAmount = new Intl.NumberFormat('en', {style:'currency',currency,minimumFractionDigits:2,maximumFractionDigits:2}).format(amount);
+      document.getElementById('checkoutTotal').textContent = formattedAmount;
+      document.getElementById('checkoutFrequency').textContent = frequency === 'once' ? 'One-time' : 'Monthly';
+      document.getElementById('checkoutCardName').textContent = name.toUpperCase().slice(0,22);
+      document.getElementById('checkoutBrand').textContent = 'VISA / MC';
+      checkoutFormView.style.display='block'; checkoutResult.classList.remove('show');
+      checkoutOverlay.classList.add('open'); document.body.style.overflow='hidden';
+      message.classList.remove('show');
+    });
+    document.getElementById('previewPay').addEventListener('click',()=>{
+      if(!currentDonation)return;
+      const formattedAmount = new Intl.NumberFormat('en',{style:'currency',currency:currentDonation.currency,minimumFractionDigits:2,maximumFractionDigits:2}).format(currentDonation.amount);
+      const reference = 'HOH-' + Math.random().toString(36).slice(2,8).toUpperCase();
+      document.getElementById('previewReference').textContent=reference;
+      document.getElementById('receiptAmount').textContent=formattedAmount;
+      document.getElementById('receiptDonor').textContent=currentDonation.name;
+      checkoutFormView.style.display='none'; checkoutResult.classList.add('show');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    renderAmounts();
+  </script>
+</body>
+</html>
